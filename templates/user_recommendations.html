@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Recommendations</title>
+    <!-- Agrega cualquier estilo adicional según sea necesario -->
+</head>
+<body>
+    <h1>Recommendations for User {{ user_id }}</h1>
+
+    {% if recommendations %}
+        <ul>
+            {% for movie in recommendations %}
+                <li>{{ movie }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No recommendations available for this user.</p>
+    {% endif %}
+</body>
+</html>

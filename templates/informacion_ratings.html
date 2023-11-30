@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información de Ratings</title>
+</head>
+<body>
+    <h1>Información de Ratings</h1>
+    <table border="1">
+        <tr>
+            <th>User ID</th>
+            <th>Movie ID</th>
+            <th>Rating</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for rating in datos %}
+            <tr>
+                <td>{{ rating['userId'] }}</td>
+                <td>{{ rating['movieId'] }}</td>
+                <td>{{ rating['rating'] }}</td>
+                <td>{{ rating['timestamp'] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
